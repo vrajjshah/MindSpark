@@ -6,7 +6,7 @@ Download https://www.apachefriends.org/download.html and the run it.
 step 1 - start Apache
 step 2-  start MySQL
 
-Clone this repository in the htdocs folder of xampp
+Clone this repository in the htdocs folder of xampp (inside the folder named php_project)
 
 now run the following in your SQL tab of xampp
 
