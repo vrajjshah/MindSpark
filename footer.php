@@ -2,18 +2,19 @@
 <html>
 <style type="text/css">
 	.footer{
-		width: 100%;
-		height:15%;
-		position: absolute	;
+		width: 120%;
+		height:10%;
+		/*position: fixed;
 		bottom: 0px;
-		left: 0px;
+		left: 0px;*/
 		background-color: rgb(168,189,191);
 	}
 	
 	.footer_inside{
-		position: absolute;	
+		/*position: absolute;	
 		right: 	0px;
-		bottom: 0px;
+		bottom: 0px;*/
+		
 		width: 	200px;
 	}
 
@@ -27,9 +28,9 @@
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-	<div class="footer">
+	<div align="right" class="footer">
 		<div class="footer_inside">	
-		<p class="text1">
+		<div class="text1">
 			Contact Co-ordinator
 			<br>
 			Vraj Patel
@@ -37,7 +38,7 @@
 			Mobile: <a href="tel:0937513154">09375131548</a>
 			<br>
 			Email: <a href="email:vraj.vup@gmail.com">vraj.vup@gmail.com</a>
-		</p>
+		</div>
 		</div>
 		
 	</div>

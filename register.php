@@ -17,12 +17,21 @@ include_once 'includes/functions.php';
         <style type="text/css">
           .reg_t{
             color: white;   
-            background-color: red;
+            
           }  
+
+          table tr  td  div form tr td input{
+            margin: 5px;
+            padding: 10px; 
+            width: 200px;
+            border:0;
+            height: 40px;
+            box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.3);
+          }
 
         </style>
     </head>
-    <body>
+    <body style="color: white; background-image:url('images.jpg'); background-repeat: no-repeat;background-size: cover;">
         <?php
             include("header.php");
 
@@ -30,13 +39,13 @@ include_once 'includes/functions.php';
         <!-- Registration form to be output if the POST variables are not
         set or if the registration script caused an error. -->
         <br>     
-        <center>  <h1>Register with us</h1>  </center>
+        <center>  <h1 style="text-shadow:3px 3px 3px rgba(0,0,0,0.3); ">Register with us</h1>  </center>
         <?php
         if (!empty($error_msg)) {
             echo $error_msg;
         }
         ?>
-        <table border=" 1" width="100%;"> 
+        <table border=" 0   " width="100%;"> 
                 <tr>    
                         <td width=" 50%;">    
                             <div class="instructions" >
@@ -55,29 +64,27 @@ include_once 'includes/functions.php';
         </ul>
     </div>
                         </td>
-
+                        </tr>
+                        <tr>
                         <td>    
                             <div class="form"  >   
             <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form">
-            <table border="1" class="reg_t">
-                <tr><td><input type='text' 
-                name='teamname' 
-                id='teamname' / 
-                placeholder="Team Name"><br></td></tr>
+            <center>
+            <table  class="reg_t" >
+                <tr><td><input type='text' name='teamname' id='teamname' placeholder="Team Name"><br></td></tr>
                 <tr><td><input type="text" name="email" id="email" placeholder="Email" /><br></td></tr>
                 <tr><td><input type="password" name="password" id="password" placeholder="Password" /><br></td></tr>
-                <tr><td><input type="text" 
-                                     name="mobile" 
-                                     id="mobile"  placeholder="Mobile Number" /><br></td></tr>
+                
                 <tr><td><input type="password" name="confirmpwd" id="confirmpwd"  placeholder="Confirm Password" /><br></td></tr>
-                <tr><td><input type="button" value="Register" onclick="return regformhash(this.form,
+                <tr><td><input type="text" name="mobile" id="mobile"  placeholder="Mobile Number" /><br></td></tr>
+                <tr><td><br><input type="button" value="Register" onclick="return regformhash(this.form,
                                    this.form.teamname,
                                    this.form.email,
                                    this.form.password,
                                    this.form.confirmpwd,
                                    this.form.mobile);" /></td></tr>
             </table>
-            
+            </center>
             
             
             
@@ -92,7 +99,7 @@ include_once 'includes/functions.php';
 
      
         
-        <p>Return to the <a href="index.php">login page</a>.</p>
+        <p align="right">Return to the <a href="index.php">login page</a>.</p>
          <?php
             include("footer.php");
 

@@ -7,11 +7,11 @@
 
 <style type="text/css">
 	.header{
-		width: 100%;
+		width: 120%;
 		height:10%;		
-		position: absolute;
+		/*position: absolute;
 		top: 0px;
-		left: 0px;
+		left: 0px;*/
 		background-color: rgb(56,127,117);
 		
 
