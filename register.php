@@ -21,7 +21,7 @@ include_once 'includes/functions.php';
         }
         ?>
         <ul>
-            <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
+            <li>teamnames may contain only digits, upper and lowercase letters and underscores</li>
             <li>Emails must have a valid email format</li>
             <li>Passwords must be at least 6 characters long</li>
             <li>Passwords must contain
@@ -36,9 +36,9 @@ include_once 'includes/functions.php';
         <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" 
                 method="post" 
                 name="registration_form">
-            Username: <input type='text' 
-                name='username' 
-                id='username' /><br>
+            Teamname: <input type='text' 
+                name='teamname' 
+                id='teamname' /><br>
             Email: <input type="text" name="email" id="email" /><br>
             Password: <input type="password"
                              name="password" 
@@ -46,13 +46,17 @@ include_once 'includes/functions.php';
             Confirm password: <input type="password" 
                                      name="confirmpwd" 
                                      id="confirmpwd" /><br>
+            Mobile: <input type="text" 
+                                     name="mobile" 
+                                     id="mobile" /><br>
             <input type="button" 
                    value="Register" 
                    onclick="return regformhash(this.form,
-                                   this.form.username,
+                                   this.form.teamname,
                                    this.form.email,
                                    this.form.password,
-                                   this.form.confirmpwd);" /> 
+                                   this.form.confirmpwd,
+                                   this.form.mobile);" /> 
         </form>
         <p>Return to the <a href="index.php">login page</a>.</p>
     </body>
