@@ -4,7 +4,7 @@ include_once 'psl-config.php';
  
 $error_msg = "";
  
-if (isset($_POST['teamname'], $_POST['email'], $_POST['p'])) {
+if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
     // Sanitize and validate the data passed in
     $teamname = filter_input(INPUT_POST, 'teamname', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -65,6 +65,26 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'])) {
                 $error_msg .= '<p class="error">Database error line 55</p>';
                 $stmt->close();
         }
+
+         
+
+         $prep_stmt = "SELECT id FROM members WHERE mobile = ? LIMIT 1";
+    $stmt = $mysqli->prepare($prep_stmt);
+ 
+    if ($stmt) {
+        $stmt->bind_param('s', $mobile);
+        $stmt->execute();
+        $stmt->store_result();
+ 
+                if ($stmt->num_rows != 1) {
+                        // A user with this teamname already exists
+                        $error_msg .= '<p class="error">You are not registered for this event</p>';
+                        $stmt->close();
+                }
+        } else {
+                $error_msg .= '<p class="error">Database error line 55</p>';
+                $stmt->close();
+        }
  
     // TODO: 
     // We'll also have to account for the situation where the user doesn't have
@@ -77,12 +97,20 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'])) {
         // This function salts it with a random salt and can be verified with
         // the password_verify function.
         $password = password_hash($password, PASSWORD_BCRYPT);
+
+        //UPDATE `members` SET teamname='vraj', email= 'vraj.vup@gmail.com', password ='asdASD', levels= '2' WHERE mobile = '?';
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO members (teamname, email, password) VALUES (?, ?, ?) WHERE `mobile` = (' . $mobile . ')")) {
-            $insert_stmt->bind_param('sss', $teamname, $email, $password);
+        if ($insert_stmt = $mysqli->prepare("UPDATE members SET teamname='$teamname', email= '$email', password ='$password' WHERE mobile = '$mobile' AND flag = '1' ")) {
+           // $insert_stmt->bind_param('sss', $teamname, $email, $password);
             // Execute the prepared query.
-            if (! $insert_stmt->execute()) {
+            if ( $insert_stmt->execute()) {
+                
+                $insert_stmt1 = $mysqli->prepare("UPDATE members SET flag='0' WHERE teamname = '$teamname' ");
+                $insert_stmt1->execute();
+            }
+
+            else {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
