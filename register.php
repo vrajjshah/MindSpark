@@ -53,7 +53,6 @@ include_once 'includes/functions.php';
             </li>
             <li>Your password and confirmation must match exactly</li>
         </ul>
-<<<<<<< HEAD
     </div>
                         </td>
 
@@ -61,43 +60,29 @@ include_once 'includes/functions.php';
                             <div class="form"  >   
             <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form">
             <table border="1" class="reg_t">
-                <tr><td><input type='text' name='username' id='username' placeholder="Username" /><br></td></tr>
+                <tr><td><input type='text' 
+                name='teamname' 
+                id='teamname' / 
+                placeholder="Team Name"><br></td></tr>
                 <tr><td><input type="text" name="email" id="email" placeholder="Email" /><br></td></tr>
                 <tr><td><input type="password" name="password" id="password" placeholder="Password" /><br></td></tr>
+                <tr><td><input type="text" 
+                                     name="mobile" 
+                                     id="mobile"  placeholder="Mobile Number" /><br></td></tr>
                 <tr><td><input type="password" name="confirmpwd" id="confirmpwd"  placeholder="Confirm Password" /><br></td></tr>
-                <tr><td><input type="button" value="Register" onclick="return regformhash(this.form,this.form.username,this.form.email,this.form.password,this.form.confirmpwd);" /></td></tr>
+                <tr><td><input type="button" value="Register" onclick="return regformhash(this.form,
+                                   this.form.teamname,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd,
+                                   this.form.mobile);" /></td></tr>
             </table>
             
             
             
             
              
-=======
-        <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" 
-                method="post" 
-                name="registration_form">
-            Teamname: <input type='text' 
-                name='teamname' 
-                id='teamname' /><br>
-            Email: <input type="text" name="email" id="email" /><br>
-            Password: <input type="password"
-                             name="password" 
-                             id="password"/><br>
-            Confirm password: <input type="password" 
-                                     name="confirmpwd" 
-                                     id="confirmpwd" /><br>
-            Mobile: <input type="text" 
-                                     name="mobile" 
-                                     id="mobile" /><br>
-            <input type="button" 
-                   value="Register" 
-                   onclick="return regformhash(this.form,
-                                   this.form.teamname,
-                                   this.form.email,
-                                   this.form.password,
-                                   this.form.confirmpwd,
-                                   this.form.mobile);" /> 
->>>>>>> e34e342a8f24905800cb8bdfc50fe76878fcc2de
+
         </form>
     </div>
                         </td>
