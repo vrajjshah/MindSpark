@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
+<head>	
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <style type="text/css">
 	.header{
-		width: 100%;
-		height:20%;
-		position: absolute;
+		width: 120%;
+		height:10%;		
+		/*position: absolute;
 		top: 0px;
-		left: 0px;
+		left: 0px;*/
 		background-color: rgb(56,127,117);
+		
+
 	}
 		.text{
 
 			color: white;
 			font-size: 200%;
 			font-family: verdana;
-			text-align: center;
-
+			text-align: center;	
 
 		}
 
 	}
 </style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
 	<div class="header">
 		<p class="text">
