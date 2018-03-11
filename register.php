@@ -41,7 +41,7 @@ include_once 'includes/functions.php';
                         <td width=" 50%;">    
                             <div class="instructions" >
         <ul>
-            <li>Usernames may contain only digits, upper and lowercase letters and underscores</li>
+            <li>teamnames may contain only digits, upper and lowercase letters and underscores</li>
             <li>Emails must have a valid email format</li>
             <li>Passwords must be at least 6 characters long</li>
             <li>Passwords must contain
@@ -53,6 +53,7 @@ include_once 'includes/functions.php';
             </li>
             <li>Your password and confirmation must match exactly</li>
         </ul>
+<<<<<<< HEAD
     </div>
                         </td>
 
@@ -71,6 +72,32 @@ include_once 'includes/functions.php';
             
             
              
+=======
+        <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" 
+                method="post" 
+                name="registration_form">
+            Teamname: <input type='text' 
+                name='teamname' 
+                id='teamname' /><br>
+            Email: <input type="text" name="email" id="email" /><br>
+            Password: <input type="password"
+                             name="password" 
+                             id="password"/><br>
+            Confirm password: <input type="password" 
+                                     name="confirmpwd" 
+                                     id="confirmpwd" /><br>
+            Mobile: <input type="text" 
+                                     name="mobile" 
+                                     id="mobile" /><br>
+            <input type="button" 
+                   value="Register" 
+                   onclick="return regformhash(this.form,
+                                   this.form.teamname,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd,
+                                   this.form.mobile);" /> 
+>>>>>>> e34e342a8f24905800cb8bdfc50fe76878fcc2de
         </form>
     </div>
                         </td>

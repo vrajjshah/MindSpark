@@ -20,18 +20,19 @@ function regformhash(form, uid, email, password, conf) {
     if (uid.value == ''         || 
           email.value == ''     || 
           password.value == ''  || 
-          conf.value == '') {
+          conf.value == '' ||
+          mobile.value == '') {
  
         alert('You must provide all the requested details. Please try again');
         return false;
     }
  
-    // Check the username
+    // Check the teamname
  
     re = /^\w+$/; 
-    if(!re.test(form.username.value)) { 
-        alert("Username must contain only letters, numbers and underscores. Please try again"); 
-        form.username.focus();
+    if(!re.test(form.teamname.value)) { 
+        alert("teamname must contain only letters, numbers and underscores. Please try again"); 
+        form.teamname.focus();
         return false; 
     }
  
