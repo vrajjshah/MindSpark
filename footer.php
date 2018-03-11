@@ -2,8 +2,8 @@
 <html>
 <style type="text/css">
 	.footer{
-		width: 120%;
-		height:10%;
+		width: 100%;
+		height:15%;
 		/*position: fixed;
 		bottom: 0px;
 		left: 0px;*/

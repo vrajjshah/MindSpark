@@ -7,7 +7,7 @@
 
 <style type="text/css">
 	.header{
-		width: 120%;
+		width: 100%;
 		height:10%;		
 		/*position: absolute;
 		top: 0px;
