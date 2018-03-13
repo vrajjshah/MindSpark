@@ -37,7 +37,7 @@ if (login_check($mysqli) == true) {
  
 <?php
         if (login_check($mysqli) == true) {
-                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['teamname']) . '.</p>';
+                        echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['teamname']) . '. <a href="redirect.php">Continue</a></p>';
  
             echo '<p>Do you want to change user? <a href="includes/logout.php">Log out</a>.</p>';
         } else {

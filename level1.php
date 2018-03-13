@@ -4,7 +4,7 @@ include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
  
 sec_session_start();
-header("Location:redirect.php")
+
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ header("Location:redirect.php")
         {
                
                header("Location:level2.php");
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2' WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2' AND date=TIMESTAMP() WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
            // mysqli_query( $mysqli,$insert_stmt);
