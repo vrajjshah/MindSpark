@@ -1,19 +1,19 @@
-
 <?php
 include 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
-
+ 
 sec_session_start();
-//header("Location:redirect.php");
-
-$stmt = $mysqli->prepare("SELECT levels FROM members WHERE teamname = ?");
+$stmt = $mysqli->prepare("SELECT levels,hint,hintvalue FROM members WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
-                $stmt->bind_result($level);
+                $stmt->bind_result($level,$hint,$hintvalue);
                 $stmt->fetch();
                 
-                 $stmt->close(); 
+
+                $stmt->close(); 
+               // echo $level;
+               // echo $hint;
 if (login_check($mysqli) == false){
  header("Location:login.php");
 }
@@ -24,14 +24,50 @@ else{
  
                 
  function onload($level)
-{               
-           
-                if ($level < "2" ) {
+{               if ($level != "2" ) {
                     
-                  header("Location:errorquiz.php");
-            }
+                  header("Location:redirect.php");
+              }
 }
+
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['hint']))
+    {
+        hintvaluecheck($hintvalue,$hint);
+        //echo $hintvalue;
+    }
+    
+
+    function hintvaluecheck($hintvalue,$hint)
+    {   
+        if ($hint=="0") {
+        echo "<script>alert('No hints left');</script>";
+        # code...
+    }
+       else if ($hintvalue=="2") {
+
+            echo "<script>alert('Hint here');</script>";
+            # code...
+        }
+        else{
+            //echo $hint;
+            dechint($hint);
+        }
+    }
+
+    function dechint($hint)
+    {   include 'includes/db_connect.php';
+        include_once 'includes/functions.php';
+include_once 'includes/psl-config.php';
+        $hint=$hint-1;
+        $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='2' WHERE teamname = ?");
+               $stmt->bind_param('s', $_SESSION['teamname'] );
+               $stmt->execute();
+                $stmt->close(); 
+       echo "<script>alert('Hint here');</script>";
+    }
+   
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,10 +76,8 @@ else{
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
-       
-            <p>Welcome <?php echo htmlentities($_SESSION['teamname']); ?>!
-
-            </p>
+        <?php if (login_check($mysqli) == true) : ?>
+            <p>Welcome <?php echo htmlentities($_SESSION['teamname']); ?>!</p>
           
     <div class="container">
     <img class="img-fluid rounded" src="hr_title.png" alt="Card image"><br/><br/>
@@ -51,14 +85,17 @@ else{
             <div class="card-body text-center">
                 <form action="" method="POST">
                 <h4 class="card-title">SOLVE THE CLUE</h4>
-                <p class="card-text">RIDDLE 2</p>
+                <p class="card-text">Identify the manufacturer of the PRODUCT described in the audio.</p>
                 
                 <div class="form-group">
                     <input type="text" class="form-control" name="answer">
                 </div>
                 <button class="btn btn-primary">SUBMIT</button>
                 </form>
-                <span style="color:red">NOTE:-Enter the answer in CAPITAL letters only!!!</span>
+                <form action="level2.php" method="post">
+   
+    <button name="hint" value="GO"> Show Hint</button>
+</form>
             </div>
         </div>
     </div>
@@ -71,11 +108,12 @@ else{
         {
                
                
+              
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 header("Location:level3.php");
-           // mysqli_query( $mysqli,$insert_stmt);
+          
            
         }
         else
@@ -85,6 +123,10 @@ else{
     }
 ?>
             <p>Return to <a href="LOGIN.php">login page</a></p>
-        
+        <?php else : ?>
+            <p>
+                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+            </p>
+        <?php endif; ?>
     </body>
 </html>

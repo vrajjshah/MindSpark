@@ -4,9 +4,70 @@ include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
  
 sec_session_start();
+$stmt = $mysqli->prepare("SELECT levels,hint,hintvalue FROM members WHERE teamname = ?");
+               $stmt->bind_param('s', $_SESSION['teamname'] );
+               $stmt->execute();
+                $stmt->bind_result($level,$hint,$hintvalue);
+                $stmt->fetch();
+                
 
+                $stmt->close(); 
+               // echo $level;
+               // echo $hint;
+if (login_check($mysqli) == false){
+ header("Location:login.php");
+}
+else{
+    onload($level);
 
+}
+ 
+                
+ function onload($level)
+{               if ($level != "1" ) {
+                    
+                  header("Location:redirect.php");
+              }
+}
+
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['hint']))
+    {
+        hintvaluecheck($hintvalue,$hint);
+        //echo $hintvalue;
+    }
+    
+
+    function hintvaluecheck($hintvalue,$hint)
+    {   if ($hint=="0") {
+        echo "<script>alert('No hints left');</script>";
+        # code...
+    }
+
+        else if ($hintvalue=="1") {
+
+            echo "<script>alert('Hint here');</script>";
+            # code...
+        }
+        else{
+            //echo $hint;
+            dechint($hint);
+        }
+    }
+
+    function dechint($hint)
+    {   include 'includes/db_connect.php';
+        include_once 'includes/functions.php';
+include_once 'includes/psl-config.php';
+        $hint=$hint-1;
+        $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='1' WHERE teamname = ?");
+               $stmt->bind_param('s', $_SESSION['teamname'] );
+               $stmt->execute();
+                $stmt->close(); 
+       echo "<script>alert('Hint here');</script>";
+    }
+   
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +92,10 @@ sec_session_start();
                 </div>
                 <button class="btn btn-primary">SUBMIT</button>
                 </form>
-                <span style="color:red">NOTE:-Enter the answer in CAPITAL letters only!!!</span>
+                <form action="level1.php" method="post">
+   
+    <button name="hint" value="GO"> Show Hint</button>
+</form>
             </div>
         </div>
     </div>
