@@ -43,11 +43,13 @@ sec_session_start();
         if($_POST['answer'] == 'SAMSUNG')
         {
                
-               header("Location:level2.php");
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2' AND date=TIMESTAMP() WHERE teamname = ?" );
+               
+              
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
-           // mysqli_query( $mysqli,$insert_stmt);
+                header("Location:level2.php");
+          
            
         }
         else

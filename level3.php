@@ -3,8 +3,10 @@
 include 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
- 
+
 sec_session_start();
+//header("Location:redirect.php");
+
 $stmt = $mysqli->prepare("SELECT levels FROM members WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
@@ -69,7 +71,7 @@ else{
         {
                
                
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='4' WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='4', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 header("Location:level3.php");

@@ -71,7 +71,7 @@ else{
         {
                
                
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3' WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 header("Location:level3.php");
