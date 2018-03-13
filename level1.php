@@ -4,7 +4,7 @@ include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
  
 sec_session_start();
-
+header("Location:redirect.php")
 
 ?>
 <!DOCTYPE html>

@@ -3,8 +3,10 @@
 include 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
- 
+
 sec_session_start();
+//header("Location:redirect.php");
+
 $stmt = $mysqli->prepare("SELECT levels FROM members WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();

@@ -7,7 +7,7 @@ sec_session_start();
 ?>
 <!DOCTYPE html>
 <html>
-    
+
     <body>
         <?php if (login_check($mysqli) == true) : ?>
             <?php
