@@ -5,6 +5,9 @@ include_once 'includes/functions.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php 
+		include("header.php")
+	 ?>
     <meta charset="utf-8">
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Login and Register tabbed form - Bootsnipp.com</title>
@@ -128,9 +131,7 @@ include_once 'includes/functions.php';
     <script src="styles/3.0/bootstrap.min.js"></script>
 </head>
 <body>
-	<?php 
-		include("header.php")
-	 ?>
+
 <div class="container">
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
