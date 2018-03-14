@@ -5,9 +5,7 @@ include_once 'includes/functions.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php 
-		include("header.php")
-	 ?>
+	
     <meta charset="utf-8">
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Login and Register tabbed form - Bootsnipp.com</title>
