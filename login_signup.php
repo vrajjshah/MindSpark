@@ -128,6 +128,9 @@ include_once 'includes/functions.php';
     <script src="styles/3.0/bootstrap.min.js"></script>
 </head>
 <body>
+	<?php 
+		include("header.php")
+	 ?>
 <div class="container">
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
