@@ -3,33 +3,16 @@ include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<?php 
-                include("header.php")
-         ?>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Login and Register tabbed form - Bootsnipp.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles/3.0/bootstrap.min.css" rel="stylesheet">
-<!--     <link href="styles/4.0/bootstrap.min.css" rel="stylesheet">
- -->    <script src="styles/jquery.min.js"></script>
-    <script src="styles/popper.min.js"></script>
-    <script src="styles/bootstrap.min.js"></script>
-        <script type="text/JavaScript" src="js/sha512.js"></script> 
-        <script type="text/JavaScript" src="js/forms.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         body {
-    padding-top: 0px;
+    padding-top: 90px;
 }
 .panel-login {
 	border-color: #ccc;
@@ -129,11 +112,14 @@ include_once 'includes/functions.php';
 }
 
     </style>
-    <script src="styles/jquery-1.11.1.min.js"></script>
-    <script src="styles/3.0/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container" style="padding-top: 5%;">
+	<?php 
+		include("header.php")
+	 ?>
+<div class="container">
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-login">
@@ -151,18 +137,21 @@ include_once 'includes/functions.php';
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="includes/process_login.php" name="login_form" method="post" role="form" style="display: block;">
+								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Id" value="">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
 									</div>
-									
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" onclick="formhash(this.form, this.form.password);">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 											</div>
 										</div>
 									</div>
@@ -178,13 +167,13 @@ include_once 'includes/functions.php';
 								</form>
 								<form id="register-form" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" role="form" name="registration_form" style="display: none;">
 									<div class="form-group">
-										<input type="text" name="teamname" id="teamname" tabindex="1" class="form-control" placeholder="Teamname" value="">
+										<input type="text" name="Teamname" id="Teamname" tabindex="1" class="form-control" placeholder="Teamname" value="">
 									</div>
 									<div class="form-group">
 										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
 									</div>
 									<div class="form-group">
-										<input type="mobile" name="mobile" id="mobile" tabindex="1" class="form-control" placeholder="Mobile No." value="" style="height: 45px; font-size: 14px">
+										<input type="mobile" name="mobile" id="email" tabindex="1" class="form-control" placeholder="Mobile No." value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
@@ -195,30 +184,21 @@ include_once 'includes/functions.php';
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="button" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now" onclick="return regformhash(this.form,this.form.teamname,this.form.email,this.form.password,this.form.confirmpwd,this.form.mobile);">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-6 col-sm-offset-3">
-		<?php
-        if (!empty($error_msg)) {
-            echo $error_msg;
-        }
-        ?>
-	</div>
 								</form>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
-	
 <script type="text/javascript">
 $(function() {
+
     $('#login-form-link').click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);
  		$("#register-form").fadeOut(100);
@@ -232,11 +212,16 @@ $(function() {
 		$('#login-form-link').removeClass('active');
 		$(this).addClass('active');
 		e.preventDefault();
-		
+		return regformhash(this.form,
+                                   this.form.teamname,
+                                   this.form.email,
+                                   this.form.password,
+                                   this.form.confirmpwd,
+                                   this.form.mobile);
 	});
+
 });
 
 </script>
-
 </body>
 </html>
