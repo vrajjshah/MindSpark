@@ -38,16 +38,16 @@ else{
     
 
     function hintvaluecheck($hintvalue,$hint)
-    {   if ($hint=="0") {
-        echo "<script>alert('No hints left');</script>";
-        # code...
-    }
-
-        else if ($hintvalue=="1") {
+    {   
+         if ($hintvalue=="1") {
 
             echo "<script>alert('Hint here');</script>";
             # code...
         }
+        else if ($hint=="0") {
+        echo "<script>alert('No hints left');</script>";
+        # code...
+    }
         else{
             //echo $hint;
             dechint($hint);
@@ -112,7 +112,7 @@ include_once 'includes/psl-config.php';
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
-                header("Location:level2.php");
+                header("Location:redirect.php");
           
            
         }

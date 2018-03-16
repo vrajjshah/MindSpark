@@ -1,108 +1,159 @@
-    <?php
+<?php
 include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
+ 
+sec_session_start();
+ 
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <meta charset="UTF-8">
-        <title>Secure Login: Registration Form</title>
-        <script type="text/JavaScript" src="js/sha512.js"></script> 
-        <script type="text/JavaScript" src="js/forms.js"></script>
-        <link rel="stylesheet" href="styles/main.css" />
-        <style type="text/css">
-          .reg_t{
-            color: white;   
-            
-          }  
+<?php 
+                include("head.php")
+         ?>
+          <script type="text/JavaScript" src="js/sha512.js"></script> 
+        <script type="text/JavaScript" src="js/forms.js"></script> 
 
-          table tr  td  div form tr td input{
-            margin: 5px;
-            padding: 10px; 
-            width: 200px;
-            border:0;
-            height: 40px;
-            box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.3);
-          }
+            <style type="text/css">
+       
+.form-gradient .font-small {
+  font-size: 0.8rem; }
 
-        </style>
-    </head>
-    <body style="color: white; background-image:url('images.jpg'); background-repeat: no-repeat;background-size: cover;">
-        <?php
-            include("header.php");
+.form-gradient .header {
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem; }
 
-        ?>
-        <!-- Registration form to be output if the POST variables are not
-        set or if the registration script caused an error. -->
-        <br>     
-        <center>  <h1 style="text-shadow:3px 3px 3px rgba(0,0,0,0.3); ">Register with us</h1>  </center>
+.form-gradient input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #fd9267;
+  -webkit-box-shadow: 0 1px 0 0 #fd9267;
+  box-shadow: 0 1px 0 0 #fd9267; }
+
+.form-gradient input[type=text]:focus:not([readonly]) + label {
+  color: #4f4f4f; }
+
+.form-gradient input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #fd9267;
+  -webkit-box-shadow: 0 1px 0 0 #fd9267;
+  box-shadow: 0 1px 0 0 #fd9267; }
+
+.form-gradient input[type=password]:focus:not([readonly]) + label {
+  color: #4f4f4f; }
+                
+            </style>
+
+         <main>
         <?php
         if (!empty($error_msg)) {
             echo $error_msg;
         }
         ?>
-        <table border=" 0   " width="100%;"> 
-                <tr>    
-                        <td width=" 50%;">    
-                            <div class="instructions" >
-        <ul>
-            <li>teamnames may contain only digits, upper and lowercase letters and underscores</li>
-            <li>Emails must have a valid email format</li>
-            <li>Passwords must be at least 6 characters long</li>
-            <li>Passwords must contain
-                <ul>
-                    <li>At least one uppercase letter (A..Z)</li>
-                    <li>At least one lowercase letter (a..z)</li>
-                    <li>At least one number (0..9)</li>
-                </ul>
-            </li>
-            <li>Your password and confirmation must match exactly</li>
-        </ul>
-    </div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>    
-                            <div class="form"  >   
+        <div class="container-fluid text-center">
+
+            <!--Card-->
+            <div class="card card-cascade wider reverse my-4 pb-5">
+
+               
+                    
+       
+<section class="form-gradient d-flex" style="align-self: center;" >
+
+    <!--Form with header-->
+    <div class="card ">
+
+        <!--Header-->
+        <div class="header pt-1 aqua-gradient">
+
+            <div class="row d-flex justify-content-center">
+                <h3 class="white-text mb-3 pt-3 font-weight-bold">Sign Up</h3>
+            </div>
+
+            
+
+        </div>
+        <!--Header-->
+
+        <div class="card-body mx-5 mt-5">
+
             <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form">
-            <center>
-            <table  class="reg_t" >
-                <tr><td><input type='text' name='teamname' id='teamname' placeholder="Team Name"><br></td></tr>
-                <tr><td><input type="text" name="email" id="email" placeholder="Email" /><br></td></tr>
-                <tr><td><input type="password" name="password" id="password" placeholder="Password" /><br></td></tr>
+            <div class="md-form ">
+                <input  id="teamname" class="form-control" type="text" name="teamname">
+                <label for="Form-email3">Your Teamname</label>
+            </div>
+            <div class="md-form ">
+                <input type="text" id="email" class="form-control" type="text" name="email">
+                <label for="Form-email3">Your email</label>
+            </div>
+
+            <div class="md-form pb-1 pb-md-3">
+                <input type="password" class="form-control"  type="password" 
+                             name="password" 
+                             id="password">
+                <label for="Form-pass3">Your password</label>
                 
-                <tr><td><input type="password" name="confirmpwd" id="confirmpwd"  placeholder="Confirm Password" /><br></td></tr>
-                <tr><td><input type="text" name="mobile" id="mobile"  placeholder="Mobile Number" /><br></td></tr>
-                <tr><td><br><input type="button" value="Register" onclick="return regformhash(this.form,
+            </div>
+            <div class="md-form pb-1 pb-md-3">
+                <input type="password" class="form-control" name="confirmpwd" id="confirmpwd">
+                <label for="Form-pass3">Confirm password</label>
+                
+            </div>
+             <div class="md-form ">
+                <input type="text" id="mobile" class="form-control"  name="mobile">
+                <label for="Form-email3">Your mobile</label>
+            </div>
+
+            <!--Grid row-->
+            <div class="row d-flex align-items-center mb-4">
+
+                <!--Grid column-->
+                <div class="col-md-1 col-md-5 d-flex align-items-start">
+                    <div class="text-center">
+            <button type="button" class="btn aqua-gradient btn-primary z-depth-1a"  onclick="return regformhash(this.form,
                                    this.form.teamname,
                                    this.form.email,
                                    this.form.password,
                                    this.form.confirmpwd,
-                                   this.form.mobile);" /></td></tr>
-            </table>
-            </center>
-            
-            
-            
-             
+                                   this.form.mobile);">Signup</button>
+                    </div>
+                </div>
+                   </form>
+                <!--Grid column-->
 
-        </form>
-    </div>
-                        </td>
-                </tr>
-        </table>
+                <!--Grid column-->
+            
+                <!--Grid column-->
+  <div class="col-md-7">
+                    <p class="font-small grey-text d-flex justify-content-end mt-3">Already have an account? <a href="login.php" class="dark-grey-text ml-1 font-weight-bold"> Sign in</a></p>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+            
+        </div>
+
+  
+    <!--/Form with header-->
+
+</section>
+            
+ 
+
+
+                       
+                        <!-- <a class="btn btn-secondary btn-lg waves-effect waves-light">Secondary button</a>
+                        <a class="btn btn-default btn-lg waves-effect waves-light">Default button</a> -->
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
         
-
-     
+        </div>
         
-        <p align="right">Return to the <a href="index.php">login page</a>.</p>
-         <?php
-            include("footer.php");
-
-        ?>
-    </body>
-</html>
+    </main>
+<?php 
+                include("foot.php")
+         ?>

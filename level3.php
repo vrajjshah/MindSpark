@@ -38,21 +38,22 @@ else{
     
 
     function hintvaluecheck($hintvalue,$hint)
-    {   if ($hint=="0") {
-        echo "<script>alert('No hints left');</script>";
-        # code...
-    }
-        
-        else if ($hintvalue=="3") {
+    {   
+         if ($hintvalue=="1") {
 
             echo "<script>alert('Hint here');</script>";
             # code...
         }
+        else if ($hint=="0") {
+        echo "<script>alert('No hints left');</script>";
+        # code...
+    }
         else{
             //echo $hint;
             dechint($hint);
         }
     }
+
 
     function dechint($hint)
     {   include 'includes/db_connect.php';

@@ -114,7 +114,7 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
             }
         }
-        header('Location: ./register_success.php');
+        header('Location: ./login.php');
     }
 }
 ?>

@@ -1,33 +1,44 @@
 <?php 
 include 'includes/db_connect.php';
  ?>
-<!DOCTYPE html>
-<meta http-equiv="Refresh" content="#">
-<html>
-<head>
-	<title>Leaderboard</title>
-        
-</head>
-<body>
-        <?php 
-                include("header.php")
+
+<?php 
+                include("head.php")
          ?>
-<?php  
-				
-			$sql = 'SELECT `Teamname`,`levels`,`date` FROM `members` ORDER BY `levels` DESC, `date` ASC';
-			mysqli_select_db($mysqli,'secure_login');
-			$retval = mysqli_query($mysqli,$sql);
+    
+    <!--Main layout-->
+    <main>
+        <title>Leaderboard</title>
+        <div class="container-fluid text-center">
+
+            <!--Card-->
+            <div class="card card-cascade wider reverse my-4 pb-5">
+
+                <!--Card image-->
+                <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <h4 style="padding-top: 2%; color: #E3468C;"><strong>Leaderboard</strong></h4>
+                              
+                    <?php  
+                
+            $sql = 'SELECT `Teamname`,`levels`,`date` FROM `members` ORDER BY `levels` DESC, `date` ASC';
+            mysqli_select_db($mysqli,'secure_login');
+            $retval = mysqli_query($mysqli,$sql);
 
 
 
-			if(! $retval)
-			{
-				die('Could not get data :'.mysqli_error());
-			}
+            if(! $retval)
+            {
+                die('Could not get data :'.mysqli_error());
+            }
 
                 ?>
-                <div style="padding-top: 5%;">
-                <table class=" table " border="1" style="width: 50%;" align="center">
+                <style type="text/css">
+                    .table-dark{
+                            background-color: #82B6AD;
+                    }
+                </style>
+                <div style="padding-top: 2%;">
+                <table class=" table table-striped" border="1" style="width: 50%;" align="center">
                        
                         <tr >
                                 <td class="table-dark">
@@ -46,26 +57,49 @@ include 'includes/db_connect.php';
                 <?php $i=1;
                 while($row =mysqli_fetch_array($retval , MYSQLI_BOTH))
                 {
-                	?>
-                	<tr>
+                    ?>
+                    <tr>
                                 <td>
                                         <?php echo $i; ?>
                                 </td>
-                		<td>
-                			<?php echo "" .$row["Teamname"]; ?>
-                		</td>
-                		<td>
-                			<?php echo "" .$row["levels"]; ?>
-                		</td>
-                		<td>
-                			<?php echo "" .$row["date"]; ?>
-                		</td>
-                		
-                		
-                	</tr>
+                        <td>
+                            <?php echo "" .$row["Teamname"]; ?>
+                        </td>
+                        <td>
+                            <?php echo "" .$row["levels"]; ?>
+                        </td>
+                        <td>
+                            <?php echo "" .$row["date"]; ?>
+                        </td>
+                        
+                        
+                    </tr>
 
-                	<?php $i++;} ?>
+                    <?php $i++;} ?>
+
                 </table>
                 </div>
-</body>
-</html>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                
+           
+                <!--/Card image-->
+
+                <!--Card content-->
+                
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+        
+        </div>
+        
+    </main>
+    <?php 
+                include("foot.php")
+         ?>
+    <!--/Main layout-->
+
+    <!--Footer-->
+    

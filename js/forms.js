@@ -17,22 +17,21 @@ function formhash(form, password) {
  
 function regformhash(form, uid, email, password, conf) {
      // Check each field has a value
-    if (uid.value == ''         || 
+    if (mobile.value == ''         || 
           email.value == ''     || 
           password.value == ''  || 
-          conf.value == '' ||
-          mobile.value == '') {
+          conf.value == '' ) {
  
         alert('You must provide all the requested details. Please try again');
         return false;
     }
  
-    // Check the teamname
+    // Check the username
  
     re = /^\w+$/; 
     if(!re.test(form.teamname.value)) { 
-        alert("teamname must contain only letters, numbers and underscores. Please try again"); 
-        form.teamname.focus();
+        alert("Userzname must contain only letters, numbers and underscores. Please try again"); 
+        form.Teamname.focus();
         return false; 
     }
  
