@@ -9,11 +9,26 @@ if (isset($_POST['email'], $_POST['p'])) {
     $password = $_POST['p']; // The hashed password.
  
     if (login($email, $password, $mysqli) == true) {
-        // Login success 
-        header('Location: ../round1/redirect.php');
+                $stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
+                $stmt->execute();
+                $stmt->bind_result($round);
+                 $stmt->fetch();
+                 if ($round == "1") {
+                     # code...
+                    header('Location: ../round1/redirect.php');
+                 }
+                 else if ($round == "2") {
+                     # code...
+                    header('Location: ../round2/redirect.php');
+                 }
+                 else if ($round == "3") {
+                     # code...
+                    header('Location: ../round3/redirect.php');
+                 }
+        
     } else {
         // Login failed 
-        header('Location: ../loginerror.php');
+        header('Location: ../index.php?error=1');
     }
 } else {
     // The correct POST variables were not sent to this page. 

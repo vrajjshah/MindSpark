@@ -11,31 +11,27 @@ sec_session_start();
     <body>
         <?php if (login_check($mysqli) == true) : ?>
             <?php
-         $stmt = $mysqli->prepare("SELECT levels FROM members WHERE teamname = ?");
-               $stmt->bind_param('s', $_SESSION['teamname'] );
+         $stmt = $mysqli->prepare("SELECT round FROM round WHERE id = '0'");
+             
                $stmt->execute();
-                $stmt->bind_result($level);
+                $stmt->bind_result($round);
                 $stmt->fetch();
-                
+                 if ($round == "1") {
+                     # code...
+                    header('Location: round1/redirect.php');
+                 }
+                 else if ($round == "2") {
+                     # code...
+                    header('Location: round2/redirect.php');
+                 }
+                 else if ($round == "3") {
+                     # code...
+                    header('Location: round3/redirect.php');
+                 }
+             ?>
 
-       
-         if ($level == 2) {
-
-            header("Location:level2.php");
-             # code...
-         }
-         elseif ($level == 1) {
-            header("Location:level1.php");
-             # code...
-         }
-          
-
-     
-        ?>
          <?php else : ?>
-            <p>
-                <span class="error">You are not authorized to access this page.</span> Please <a href="login.php">login</a>.
-            </p>
+           <?php header("Location:level1.php"); ?>
         <?php endif; ?>
     </body>
 </html>

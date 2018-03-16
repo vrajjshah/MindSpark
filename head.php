@@ -2,7 +2,9 @@
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
+include_once 'includes/psl-config.php';
 ?>
+ 
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
@@ -34,8 +36,9 @@ include_once 'includes/functions.php';
             <ul class="custom-scrollbar">
                 <!-- Logo -->
                 <li>
-                    <div class="waves-light waves-effect waves-light aqua-gradient">
-                        <a href="#"><h4 style="text-align: center; padding-top: 4%; color: white;"><!-- <?php echo $_SESSION['teamname']; ?> --></h4></a>
+                  <div class="waves-light waves-effect waves-light aqua-gradient">
+                        <a href="#"><h4 style="text-align: center; padding-top: 4%; color: white;">
+                        <?php echo $_SESSION['teamname']; ?></h4></a>
                     </div>
                 </li>
                 <!--/. Logo -->
@@ -119,11 +122,17 @@ include_once 'includes/functions.php';
             </div>
             <!-- Breadcrumb-->
             <div class="breadcrumb-dn mr-auto">
-                <p>MindSpark</p>
+                <p><a href="index.php">MindSpark</a></p>
             </div>
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="round1/redirect.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Continue</span></a>
+                   <?php  if ($isTouch = empty($logged)) {
+                        echo ' ';
+                        }
+                        elseif ($logged== "in"){
+                                 echo ' <a class="nav-link waves-effect waves-light" href="redirect.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Continue</span></a>';
+                            }
+                        ?>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect waves-light" href="feedback.php"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Feedback</span></a>
@@ -134,9 +143,14 @@ include_once 'includes/functions.php';
                         Account
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item waves-effect waves-light" href="login.php">Login</a>
-                        <a class="dropdown-item waves-effect waves-light" href="register.php">Sign Up</a>
-                        
+                        <?php  if ($logged== "in") {
+                        echo '<a class="dropdown-item waves-effect waves-light" href="../logout.php">Logout</a>';
+                        }
+                        else{
+                         echo' <a class="dropdown-item waves-effect waves-light" href="../login.php">Login</a>
+                        <a class="dropdown-item waves-effect waves-light" href="../register.php">Sign Up</a>';
+                            }
+                        ?>
                     </div>
                 </li>
             </ul>
