@@ -35,7 +35,7 @@ include_once 'includes/functions.php';
                 <!-- Logo -->
                 <li>
                     <div class="waves-light waves-effect waves-light aqua-gradient">
-                        <a href="#"><h4 style="text-align: center; padding-top: 4%; color: white;"><?php echo $_SESSION['teamname']; ?></h4></a>
+                        <a href="#"><h4 style="text-align: center; padding-top: 4%; color: white;"><!-- <?php echo $_SESSION['teamname']; ?> --></h4></a>
                     </div>
                 </li>
                 <!--/. Logo -->
@@ -95,7 +95,7 @@ include_once 'includes/functions.php';
                                         <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
                                     </li>
                                     <li><div style="padding-top: 1%;">&nbsp&nbsp Mayank Patel</div>
-                                        <li><a href="tel:8153895062" class="waves-effect">+918153895062</a>
+                                        <li><a href="tel:8153895063" class="waves-effect">+918153895063</a>
                                     </li>
                                     
                                 </ul>

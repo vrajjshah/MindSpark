@@ -17,7 +17,8 @@ function formhash(form, password) {
  
 function regformhash(form, uid, email, password, conf) {
      // Check each field has a value
-    if (mobile.value == ''         || 
+    if (teamname.value == '' ||
+        mobile.value == ''         || 
           email.value == ''     || 
           password.value == ''  || 
           conf.value == '' ) {

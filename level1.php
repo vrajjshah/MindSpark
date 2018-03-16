@@ -2,7 +2,7 @@
 include 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
- 
+ include 'head.php';
 sec_session_start();
 $stmt = $mysqli->prepare("SELECT levels,hint,hintvalue FROM members WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );

@@ -20,7 +20,7 @@
 
                     
 
-                        <a href="login.php" class="btn btn-primary btn-lg waves-effect waves-light">Login</a>
+                        <a href="login.php" class="btn btn-primary btn-lg waves-effect waves-light">Continue to Login</a>
                         
                 </div>
                 <!--/.Card content-->

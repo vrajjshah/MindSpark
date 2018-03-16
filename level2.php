@@ -39,7 +39,7 @@ else{
 
     function hintvaluecheck($hintvalue,$hint)
     {   
-         if ($hintvalue=="1") {
+         if ($hintvalue=="2") {
 
             echo "<script>alert('Hint here');</script>";
             # code...
