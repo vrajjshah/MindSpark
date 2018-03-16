@@ -101,8 +101,8 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
         //UPDATE `members` SET teamname='vraj', email= 'vraj.vup@gmail.com', password ='asdASD', levels= '2' WHERE mobile = '?';
  
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("UPDATE members SET teamname='$teamname', email= '$email', password ='$password' WHERE mobile = '$mobile' AND flag = '1' ")) {
-           // $insert_stmt->bind_param('sss', $teamname, $email, $password);
+        if ($insert_stmt = $mysqli->prepare("UPDATE members SET teamname=?, email= ?, password =? WHERE mobile = ? AND flag = '1' ")) {
+           $insert_stmt->bind_param('ssss', $teamname, $email, $password,$mobile);
             // Execute the prepared query.
             if ( $insert_stmt->execute()) {
                 
