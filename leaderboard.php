@@ -1,6 +1,22 @@
-<?php 
-include 'includes/db_connect.php';
- ?>
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+ 
+sec_session_start();
+ 
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
+$stmt = $mysqli->prepare("SELECT round FROM round WHERE id ='0'");
+$stmt->execute();
+                $stmt->bind_result($round);
+                 $stmt->fetch();
+                 $stmt->close();
+                
+?>
+
 
 <?php 
                 include("head.php")
@@ -17,6 +33,7 @@ include 'includes/db_connect.php';
                 <!--Card image-->
                 <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                     <h4 style="padding-top: 2%; color: #E3468C;"><strong>Leaderboard</strong></h4>
+                    <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
                               
                     <?php  
                 
