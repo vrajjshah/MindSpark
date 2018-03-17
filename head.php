@@ -3,8 +3,10 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
+
+
+
 ?>
- 
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
@@ -150,11 +152,11 @@ include_once 'includes/psl-config.php';
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <?php  if ($logged== "in") {
-                        echo '<a class="dropdown-item waves-effect waves-light" href="../logout.php">Logout</a>';
+                        echo '<a class="dropdown-item waves-effect waves-light" href="logout.php">Logout</a>';
                         }
                         else{
-                         echo' <a class="dropdown-item waves-effect waves-light" href="../login.php">Login</a>
-                        <a class="dropdown-item waves-effect waves-light" href="../register.php">Sign Up</a>';
+                         echo' <a class="dropdown-item waves-effect waves-light" href="login.php">Login</a>
+                        <a class="dropdown-item waves-effect waves-light" href="register.php">Sign Up</a>';
                             }
                         ?>
                     </div>
