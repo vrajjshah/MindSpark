@@ -38,7 +38,13 @@ include_once 'includes/psl-config.php';
                 <li>
                   <div class="waves-light waves-effect waves-light aqua-gradient">
                         <a href="#"><h4 style="text-align: center; padding-top: 4%; color: white;">
-                        <?php echo $_SESSION['teamname']; ?></h4></a>
+                        <?php  if ($isTouch = empty($logged)) {
+                        echo ' ';
+                        }
+                        elseif ($logged== "in"){
+                                 echo  $_SESSION['teamname']; 
+                            }
+                        ?></h4></a>
                     </div>
                 </li>
                 <!--/. Logo -->

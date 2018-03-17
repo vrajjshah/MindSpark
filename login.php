@@ -56,13 +56,8 @@ $stmt->execute();
             <div class="card card-cascade wider reverse my-4 pb-5">
 
                 <!--Card image-->
-                <!-- <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                    <img src="2/img%2520135.jpg" class="img-fluid">
-                    <a href="#!">
-                        <div class="mask waves-effect waves-light"></div>
-                    </a>
-                </div>
-            -->
+             
+           
                 <!--/Card image-->
 
                 <!--Card content-->
@@ -91,10 +86,12 @@ $stmt->execute();
         <!--Header-->
 
         <div class="card-body mx-5 mt-5">
-
+             
+                        <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
             <!--Body-->
             <form action="includes/process_login.php" method="post" name="login_form">
             <div class="md-form ">
+
                 <input type="text" id="email" class="form-control" type="text" name="email">
                 <label for="Form-email3">Your email</label>
             </div>
