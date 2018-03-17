@@ -8,7 +8,7 @@ function sec_session_start() {
     $httponly = true;
     // Forces sessions to only use cookies.
     if (ini_set('session.use_only_cookies', 1) === FALSE) {
-        header("Location: ../loginerror.php)");
+        header("Location: ../loginerror.php");
         exit();
     }
     // Gets current cookies params.
