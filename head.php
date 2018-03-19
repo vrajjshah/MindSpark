@@ -11,7 +11,7 @@ include_once 'includes/psl-config.php';
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=0.8, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
  
 
@@ -102,8 +102,8 @@ include_once 'includes/psl-config.php';
                         <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
                             <div class="collapsible-body">
                                 <ul class="list-unstyled">
-                                    <li><div style="padding-top: 1%;">&nbsp&nbsp Vraj Patel</div>
-                                        <li><a href="tel:9375131548" class="waves-effect">+919375131548</a>
+                                    <li><div style="padding-top: 1%;">&nbsp&nbsp Aakash Bhanushali</div>
+                                        <li><a href="tel:8905948042" class="waves-effect">+918905948042</a>
                                     </li>
                                     <li><div style="padding-top: 1%;">&nbsp&nbsp Mayank Patel</div>
                                         <li><a href="tel:8153895063" class="waves-effect">+918153895063</a>
