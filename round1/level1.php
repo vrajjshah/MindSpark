@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="1") {
 
-            echo "<script>alert('Hint here');</script>";
+            echo "<script>alert('Where do you check your internet connection, generally (Just an Indian thing)?');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -114,7 +114,7 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                        <p class="card-text">#4885ed #db3236 #f4c20d #4885ed #3cba54 #db3236</p>
+                        <p class="card-text"><h3>#4885ed #db3236 #f4c20d #4885ed #3cba54 #db3236</h3></p>
 
                     
                          <form action="level1.php" method="POST">
