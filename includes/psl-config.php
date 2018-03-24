@@ -13,7 +13,7 @@ define("SECURE", FALSE);    // FOR DEVELOPMENT ONLY!!!!
  */  
 define("HOST", "mindspark18.mysql.database.azure.com");     // The host you want to connect to.
 define("USER", "vraj@mindspark18");    // The database username. 
-   // The database password. 
+define("PASSWORD", "asdASD123");    // The database password. 
 define("DATABASE", "secure_login");    // The database name.
  
 define("CAN_REGISTER", "any");
