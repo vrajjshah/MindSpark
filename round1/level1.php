@@ -114,7 +114,7 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                        <p class="card-text">Riddle</p>
+                        <p class="card-text">#4885ed #db3236 #f4c20d #4885ed #3cba54 #db3236</p>
 
                     
                          <form action="level1.php" method="POST">
@@ -144,7 +144,7 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if($_POST['answer'] == 'SAMSUNG')
+        if($_POST['answer'] == 'google')
         {
                
                
