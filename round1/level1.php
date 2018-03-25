@@ -147,12 +147,16 @@ include_once 'includes/psl-config.php';
         if($_POST['answer'] == 'google')
         {
                
-               
-              
+                // echo "<script>alert('Correct Answer');</script>";
+            
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
-                header("Location:redirect.php");
+                $insert_stmt->close();
+                echo "<script>alert('Correct Answer');
+                            window.location.replace('redirect.php');</script>";
+                
+                
           
            
         }
