@@ -107,7 +107,7 @@ if (isset($_POST['teamname'], $_POST['email'], $_POST['p'],$_POST['mobile'])) {
                 
                 $insert_stmt1 = $mysqli->prepare("UPDATE members SET flag='0' WHERE teamname = '$teamname' ");
                 $insert_stmt1->execute();
-                header('Location: ./login.php');
+                header('Location: ./instruction.php');
             }
 
             else {

@@ -33,11 +33,7 @@ box-shadow: 0 1px 0 0 #fd9267; }
 color: #4f4f4f; }
 </style>
 <main>
-  <?php
-  if (!empty($error_msg)) {
-  echo $error_msg;
-  }
-  ?>
+  
   <div class="container-fluid text-center">
     <!--Card-->
     <div class="card card-cascade wider reverse my-4 pb-5">
@@ -56,6 +52,11 @@ color: #4f4f4f; }
           </div>
           <!--Header-->
           <div class="card-body mx-5 mt-5">
+            <?php
+  if (!empty($error_msg)) {
+  echo $error_msg;
+  }
+  ?>
             <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" name="registration_form">
               <div class="md-form ">
                 <input  id="teamname" class="form-control" type="text" name="teamname">
