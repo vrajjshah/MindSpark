@@ -34,7 +34,7 @@ else{
 }
  
                 
- function onload($level.$round)
+ function onload($level,$round)
 {               if ($level != "2" || $round !="2"  ) {
                     
                   header("Location:redirect.php");
