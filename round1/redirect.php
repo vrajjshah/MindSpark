@@ -29,16 +29,21 @@ sec_session_start();
        if ($round==1) 
        {
    
-             if ($level == 2) {
+        //     if ($level == 3) {
 
-                header("Location:level2.php");
-                 # code...
-             }
-             elseif ($level == 1) {
-                header("Location:level1.php");
-                 # code...
-             }
-          
+        //     header("Location:level3.php");
+        //      # code...
+        //  } 
+        //     else if ($level == 2) {
+
+        //         header("Location:level2.php");
+        //          # code...
+        //      }
+        //      elseif ($level == 1) {
+        //         header("Location:level1.php");
+        //          # code...
+        //      }
+            header("Location:level$level.php");
         }
         else{
             header("Location:../redirect.php");

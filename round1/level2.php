@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "2" || $round !="1"  ) {
+{               if ($level != "2" || $round != "1"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="2") {
 
-            echo "<script>alert('Hint here');</script>";
+            echo "<script>alert('Where are most of tech companies head offices located?');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -70,12 +70,13 @@ else{
     {   include 'includes/db_connect.php';
         include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
-        $hint=$hint-1;
+         $hint=$hint-1;
         $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='2' WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-       echo "<script>alert('Hint here');</script>";
+      echo "<script>alert('Where are most of tech companies head offices located?');</script>";
+      header("Refresh:0");
     }
 ?>
 <?php 
@@ -113,23 +114,23 @@ include_once 'includes/psl-config.php';
                 <!--Card content-->
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
-                     <h4 class="card-title">SOLVE THE CLUE</h4>
-                <p class="card-text">Riddle</p>
-
+                         <h4 class="card-title">SOLVE THE CLUE</h4>
+                         <p class="card-text" > <h3>37°23’15”  , -122°3’27” <br> Where it all started!</h3>  </p>
+ 
                     
-                        <form action="level2.php" method="POST">
+                         <form action="level2.php" method="POST">
                
                 
-                <div class="form-group">
-                    <input type="text" class="form-control" name="answer" style="width: 50%;margin: 0 auto;">
-                </div>
-                <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
-                </form>
-              <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
- 				?>
-                <form action="level2.php" method="post">
-   	   				 <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
-				</form>
+                        <div class="form-group">
+                        <input type="text" class="form-control" name="answer" style="width: 50%;margin: 0 auto;">
+                         </div>
+                         <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
+                         </form>
+                         <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
+ 				       ?>
+                         <form action="level2.php" method="post">
+   	   				     <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
+				        </form>
 				
                 </div>
                 <!--/.Card content-->
@@ -144,15 +145,18 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if($_POST['answer'] == 'SAMSUNG')
+        if(strtolower($_POST['answer']) == 'silicon valley')
         {
                
-               
-              
+                // echo "<script>alert('Correct Answer');</script>";
+            
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
-                header("Location:redirect.php");
+                $insert_stmt->close();
+                echo " <script>window.location.replace('redirect.php');</script>";
+                
+                
           
            
         }

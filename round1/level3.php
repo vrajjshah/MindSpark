@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "1" || $round != "1"  ) {
+{               if ($level != "3" || $round != "1"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -50,9 +50,9 @@ else{
 
     function hintvaluecheck($hintvalue,$hint)
     {   
-         if ($hintvalue=="1") {
+         if ($hintvalue=="3") {
 
-            echo "<script>alert('Where do you check your internet connection, generally (Just an Indian thing)?');</script>";
+            echo "<script>alert('Imagine a planet having aliens with 7 fingers (in total).');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -71,11 +71,11 @@ else{
         include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
          $hint=$hint-1;
-        $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='1' WHERE teamname = ?");
+        $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='3' WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('Where do you check your internet connection, generally (Just an Indian thing)?');</script>";
+      echo "<script>alert('Imagine a planet having aliens with 7 fingers (in total).');</script>";
       header("Refresh:0");
     }
 ?>
@@ -115,10 +115,10 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3>#4885ed #db3236   #f4c20d   #4885ed   #3cba54   #db3236 </h3>  </p>
+                         <p class="card-text" > <h3>If 153+145=331 then 456+654 = ?</h3>  </p>
  
                     
-                         <form action="level1.php" method="POST">
+                         <form action="level3.php" method="POST">
                
                 
                         <div class="form-group">
@@ -128,7 +128,7 @@ include_once 'includes/psl-config.php';
                          </form>
                          <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
  				       ?>
-                         <form action="level1.php" method="post">
+                         <form action="level3.php" method="post">
    	   				     <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
 				        </form>
 				
@@ -145,12 +145,12 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == 'google')
+        if(strtolower($_POST['answer']) == '1443')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='4', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();
