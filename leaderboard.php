@@ -16,6 +16,9 @@ $stmt->close();
 <?php
 include("head.php")
 ?>
+<head>
+  <meta http-equiv="refresh" content="5">
+</head>
 <!--Main layout-->
 <main>
     <title>Leaderboard</title>
