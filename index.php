@@ -43,8 +43,7 @@ Because here comes the most twisted treasure hunt with questions comprehensive o
 Round 3- The third and final round is also about QR Code, but this shall be spread over to the campus area and not just college. 
 
 Round 2 & 3 basically have both types of riddles. Simple one, regarding Googling skills and the one based on QR Code. -->
-                </p>
-                <a href="register.php" class="btn btn-primary btn-lg waves-effect waves-light">Register</a>
+              <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round Winners</a>
                 </br>
                 </br>
                 <p class="card-text">Already Registered?</p>
