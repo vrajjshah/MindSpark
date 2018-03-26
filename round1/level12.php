@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "5" || $round != "1"  ) {
+{               if ($level != "12" || $round != "1"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -50,9 +50,9 @@ else{
 
     function hintvaluecheck($hintvalue,$hint)
     {   
-         if ($hintvalue=="5") {
+         if ($hintvalue=="12") {
 
-            echo "<script>alert('Hint here');</script>";
+            echo "<script>alert('among TIME magazine’s list of the 100 Most Influential People in the World');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -71,11 +71,11 @@ else{
         include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
          $hint=$hint-1;
-        $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='5' WHERE teamname = ?");
+        $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='12' WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('Hint here');</script>";
+      echo "<script>alert('among TIME magazine’s list of the 100 Most Influential People in the World');</script>";
       header("Refresh:0");
     }
 ?>
@@ -101,24 +101,24 @@ include_once 'includes/psl-config.php';
             <!--Card-->
             <div class="card card-cascade wider reverse my-4 pb-5">
 
-                <!--Card image-->
-                <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                    <!-- <img src="2/img%2520135.jpg" class="img-fluid">
- -->                    
-                        <div class="mask waves-effect waves-light"></div>
-                    </a>
-                </div>
-           
-                <!--/Card image-->
+                
 
                 <!--Card content-->
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3>In a certain Language, England is written as HMFLCOZ, How QUARTER is written?</h3>  </p>
- 
+                        <!--Card image-->
+                <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                     <img src="level12.jpg" class="img-fluid">
+                   
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+           
+                <!--/Card image-->
+                <br>
                     
-                         <form action="level5.php" method="POST">
+                         <form action="level12.php" method="POST">
                
                 
                         <div class="form-group">
@@ -128,7 +128,7 @@ include_once 'includes/psl-config.php';
                          </form>
                          <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
  				       ?>
-                         <form action="level5.php" method="post">
+                         <form action="level12.php" method="post">
    	   				     <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
 				        </form>
 				
@@ -145,12 +145,12 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if(strtoupper($_POST['answer']) == 'BTRRQFS')
+        if(strtolower($_POST['answer']) == 'aamir khan')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='6', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='13', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();
