@@ -90,7 +90,7 @@ include("head.php")
         <div class="card card-cascade wider reverse my-4 pb-5">
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <img src="./2/1.jpg" class="img-fluid">
+                <img src="1.jpg" class="img-fluid">
                 <a href="#!">
                     <div class="mask waves-effect waves-light"></div>
                 </a>
