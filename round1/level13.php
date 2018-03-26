@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="13") {
 
-            echo "<script>alert('how is the competition');</script>";
+            echo "<script>alert('how is the competition!');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -75,7 +75,7 @@ include_once 'includes/psl-config.php';
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('how is the competition');</script>";
+      echo "<script>alert('how is the competition!');</script>";
       header("Refresh:0");
     }
 ?>
