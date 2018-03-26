@@ -26,7 +26,7 @@ sec_session_start();
         # code...
         header('Location: round3/redirect.php');
         }
-        else if ($round == "4") {
+        else if ($round == "0") {
         # code...
         header('Location: roundover.php');
         }

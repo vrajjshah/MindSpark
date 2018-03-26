@@ -1,3 +1,4 @@
+
 <?php
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
@@ -32,7 +33,7 @@ include("head.php")
                 
                 <?php
                 
-                $sql = 'SELECT `Teamname`,`levels`,`date` FROM `members` ORDER BY `levels` DESC, `date` ASC';
+                $sql = 'SELECT `Teamname`,`levels`,`date` FROM `members` WHERE levels>=6 ORDER BY `levels` DESC, `date` ASC';
                 mysqli_select_db($mysqli,'secure_login');
                 $retval = mysqli_query($mysqli,$sql);
                 if(! $retval)
@@ -45,7 +46,6 @@ include("head.php")
                 background-color: #82B6AD;
                 }
                 </style>
-                <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 1 winners</a>
                 <div style="padding-top: 2%;">
                     <table class=" table table-striped" border="1" style="width: 50%;" align="center">
                         
