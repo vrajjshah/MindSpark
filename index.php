@@ -36,7 +36,7 @@ include("head.php")
                 <h4 class="card-title"><strong>WELCOME TO MINDSPARK</strong></h4>
                 <h5 class="blue-text"><strong>Buck up and brush up your logic! 
 Because here comes the most twisted treasure hunt with questions comprehensive of spontaneity, logic and common sense. One just has to just efficiently use their cognitive ability in  order to solve the riddles no programming experience required.</strong></h5>
-                <p class="card-text">Round 1- Focuses on your Googling skills, how efficiently you search for the given riddles. Full internet access will be provided for the same. 
+                <p class="card-text">Round 1- Focuses on your Googling skills, how efficiently you search for the given riddles.
 
 <!-- Round 2- Answers to the riddles shall be in the form of QR Code. Participants will be required to ascertain these answers from different places of the college.
 
