@@ -34,7 +34,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "12" || $round != "1"  ) {
+{               if ($level != "16" || $round != "1"  ) {
                     
                   header("Location:redirect.php");
               }
