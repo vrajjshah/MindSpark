@@ -103,7 +103,7 @@ include("head.php")
                 <h4 class="card-title"><strong>Round-1 Completed</strong></h4>
                 <h5 class="blue-text"><strong>Please check the leaderboard for your ranking</strong></h5>
                 
-                <a href="leaderboard.php" class="btn btn-primary btn-lg waves-effect waves-light">leaderboard</a>
+                <a href="../leaderboard.php" class="btn btn-primary btn-lg waves-effect waves-light">leaderboard</a>
                
                 
             </div>
