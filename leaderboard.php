@@ -27,7 +27,7 @@ include("head.php")
         <div class="card card-cascade wider reverse my-4 pb-5">
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Leaderboard</strong></h4>
+                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Leaderboard GMT Timezone</strong></h4>
                 <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
                 
                 <?php
