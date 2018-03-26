@@ -108,12 +108,21 @@ include_once 'includes/psl-config.php';
                         <div class="mask waves-effect waves-light"></div>
                     </a>
                 </div>
-                 <!--Card content-->
+           
+                <!--/Card image-->
+                    
+                <!--Card content-->
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
                          <p class="card-text" > <h3>What is common between them?This is the path to peace! </h3>  </p>
- 
+                            <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <img src="level15.jpg" class="img-fluid">
+                    
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+                <br>
                     
                          <form action="level15.php" method="POST">
                
@@ -124,21 +133,13 @@ include_once 'includes/psl-config.php';
                          <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
                          </form>
                          <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
-                       ?>
+ 				       ?>
                          <form action="level15.php" method="post">
-                         <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
-                        </form>
-                
+   	   				     <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
+				        </form>
+				
                 </div>
                 <!--/.Card content-->
-                <!--/Card image-->
-                    <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                    <img src="level15.jpg" class="img-fluid">
-                    
-                        <div class="mask waves-effect waves-light"></div>
-                    </a>
-                </div>
-               
 
             </div>
             <!--/.Card-->
