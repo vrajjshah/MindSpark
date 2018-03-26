@@ -110,13 +110,15 @@ include_once 'includes/psl-config.php';
                          <p class="card-text" > <h3>Does something relate to today?</h3>  </p>
                         <!--Card image-->
                 <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                    - <img src="level13.jpg" class="img-fluid">
-                     
+                     <img src="level13.jpg" class="img-fluid">
+                   
                         <div class="mask waves-effect waves-light"></div>
                     </a>
                 </div>
+           
                 <!--/Card image-->
                 <br>
+                    
                          <form action="level13.php" method="POST">
                
                 
