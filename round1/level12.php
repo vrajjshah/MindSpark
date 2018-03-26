@@ -109,7 +109,7 @@ include_once 'includes/psl-config.php';
                          <h4 class="card-title">SOLVE THE CLUE</h4>
                         <!--Card image-->
                 <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                     <img src="level12.jpg" class="img-fluid">
+                     <img src="https://drive.google.com/file/d/19kHPiuzx0BmGssR_q5_vmpeWwHk_gBLa/view?usp=sharing" class="img-fluid">
                    
                         <div class="mask waves-effect waves-light"></div>
                     </a>

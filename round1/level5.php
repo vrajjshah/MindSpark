@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="5") {
 
-            echo "<script>alert('Hint here');</script>";
+            echo "<script>alert('Intermediate :  GNE L DNA');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -75,7 +75,7 @@ include_once 'includes/psl-config.php';
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('Hint here');</script>";
+      echo "<script>alert('Intermediate :  GNE L DNA');</script>";
       header("Refresh:0");
     }
 ?>
