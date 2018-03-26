@@ -36,7 +36,7 @@ include("head.php")
                 <h4 class="card-title"><strong>Round 1 is closed.</strong></h4>
                 <h5 class="blue-text"><strong>Please check the leaderboard</strong></h5>
                 <p class="card-text">Teams which are level 6 or up will proceed to next round on 27/3/2017.</p>
-                <a href="leaderboard.php" class="btn btn-primary btn-lg waves-effect waves-light">Leaderboard</a>
+                <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round Winners</a>
                 </br>
                 </br>
                 

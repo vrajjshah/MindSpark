@@ -45,7 +45,6 @@ include("head.php")
                 background-color: #82B6AD;
                 }
                 </style>
-                <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 1 winners</a>
                 <div style="padding-top: 2%;">
                     <table class=" table table-striped" border="1" style="width: 50%;" align="center">
                         
