@@ -22,14 +22,14 @@ include("head.php")
 </head>
 <!--Main layout-->
 <main>
-    <title>Leaderboard   GMT Timezone</title>
+    <title>finalist</title>
     <div class="container-fluid text-center">
         <!--Card-->
         <div class="card card-cascade wider reverse my-4 pb-5">
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Leaderboard GMT Timezone</strong></h4>
-                <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
+                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Round 1 winners</strong></h4>
+                
                 
                 <?php
                 
