@@ -21,7 +21,7 @@ include("head.php")
 </head>
 <!--Main layout-->
 <main>
-    <title>Leaderboard   GMT Timzone</title>
+    <title>Leaderboard   GMT Timezone</title>
     <div class="container-fluid text-center">
         <!--Card-->
         <div class="card card-cascade wider reverse my-4 pb-5">
