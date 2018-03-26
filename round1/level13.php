@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="13") {
 
-            echo "<script>alert('something related to today's competition!');</script>";
+            echo "<script>alert('Heroic theory of invention and scientific development');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -75,7 +75,7 @@ include_once 'includes/psl-config.php';
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('something related to today's competition!');</script>";
+      echo "<script>alert('Heroic theory of invention and scientific development');</script>";
       header("Refresh:0");
     }
 ?>
@@ -107,18 +107,17 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3>Does something relate to today?</h3>  </p>
-                        <!--Card image-->
+                         <p class="card-text" > <h3>René Descartes or Pierre de Fermat ? No one knows the truth!</h3>  </p>
+                            <!--Card image-->
                 <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                     <img src="level13.jpg" class="img-fluid">
-                   
+                    <img src="level14.jpg" class="img-fluid">
+                    
                         <div class="mask waves-effect waves-light"></div>
                     </a>
                 </div>
            
                 <!--/Card image-->
-                <br>
-                    
+                    <br>
                          <form action="level13.php" method="POST">
                
                 
@@ -128,11 +127,11 @@ include_once 'includes/psl-config.php';
                          <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
                          </form>
                          <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
- 				       ?>
+                       ?>
                          <form action="level13.php" method="post">
-   	   				     <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
-				        </form>
-				
+                         <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
+                        </form>
+                
                 </div>
                 <!--/.Card content-->
 
@@ -146,7 +145,7 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == 'mindspark')
+        if(strtolower($_POST['answer']) == 'gottfried leibniz')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";

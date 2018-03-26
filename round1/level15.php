@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="15") {
 
-            echo "<script>alert('Hint Here');</script>";
+            echo "<script>alert('helium, neon, argon, krypton, xenon, and radon');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -75,7 +75,7 @@ include_once 'includes/psl-config.php';
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('Hint Here');</script>";
+      echo "<script>alert('helium, neon, argon, krypton, xenon, and radon');</script>";
       header("Refresh:0");
     }
 ?>
