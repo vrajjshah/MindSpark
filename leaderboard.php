@@ -17,11 +17,11 @@ $stmt->close();
 include("head.php")
 ?>
 <head>
-  <meta http-equiv="refresh" content="5">
+  <meta http-equiv="refresh" content="60">
 </head>
 <!--Main layout-->
 <main>
-    <title>Leaderboard</title>
+    <title>Leaderboard   GMT Timzone</title>
     <div class="container-fluid text-center">
         <!--Card-->
         <div class="card card-cascade wider reverse my-4 pb-5">
