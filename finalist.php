@@ -18,7 +18,7 @@ $stmt->close();
 include("head.php")
 ?>
 <head>
-  <meta http-equiv="refresh" content="60">
+  
 </head>
 <!--Main layout-->
 <main>
