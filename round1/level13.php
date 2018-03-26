@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="13") {
 
-            echo "<script>alert('something related to today's competition!');</script>";
+            echo "<script>alert('Heroic theory of invention and scientific development');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -75,7 +75,7 @@ include_once 'includes/psl-config.php';
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-      echo "<script>alert('something related to today's competition!');</script>";
+      echo "<script>alert('Heroic theory of invention and scientific development');</script>";
       header("Refresh:0");
     }
 ?>
@@ -107,10 +107,10 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3>Does something relate to today?</h3>  </p>
+                         <p class="card-text" > <h3>René Descartes or Pierre de Fermat ? No one knows the truth!</h3>  </p>
                             <!--Card image-->
                 <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                    <img src="level14.jpg" class="img-fluid">
+                    <img src="level13.jpg" class="img-fluid">
                     
                         <div class="mask waves-effect waves-light"></div>
                     </a>
