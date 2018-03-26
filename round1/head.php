@@ -77,18 +77,7 @@ include_once 'includes/psl-config.php';
                         </li><li>
                             <p>_____________________________</p>
                         </li>
-                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-eye"></i> About<i class="fa fa-angle-down rotate-icon"></i></a>
-                            <div class="collapsible-body">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="waves-effect">Introduction</a>
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                        </li>
-                         <li>
-                            <p>_____________________________</p>
-                        </li>
+                        
                         <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact us<i class="fa fa-angle-down rotate-icon"></i></a>
                             <div class="collapsible-body">
                                 <ul class="list-unstyled">
