@@ -120,7 +120,7 @@ if(strtolower($_POST['answer']) == 'a. p. j. abdul kalam')
                 // echo "<script>alert('Correct Answer');</script>";
             
                date_default_timezone_set('Asia/Kolkata');
-               $date=('d-m-Y H:i');
+               $date=date('d-m-Y H:i');
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='16', date=? WHERE teamname = ?" );
                $insert_stmt->bind_param('ss', $_SESSION['teamname'], $date );
                 $insert_stmt->execute();
