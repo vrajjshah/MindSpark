@@ -151,7 +151,7 @@ Question: Find out the value of A if values of m and n are 2 and 3 respectively.
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == 'wikipedia')
+        if(strtolower($_POST['answer']) == '72')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
