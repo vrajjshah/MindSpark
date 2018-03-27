@@ -119,12 +119,13 @@ if(strtolower($_POST['answer']) == 'a. p. j. abdul kalam')
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='16', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
-               $insert_stmt->bind_param('s', $_SESSION['teamname'] );
+               date_default_timezone_set('Asia/Kolkata');
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='16', date=? WHERE teamname = ?" );
+               $insert_stmt->bind_param('ss', $_SESSION['teamname'], $date('d-m-Y H:i') );
                 $insert_stmt->execute();
                 $insert_stmt->close();
                 echo " <script>window.location.replace('redirect.php');</script>";
-        }
+            }
 else
 {
 echo "<script>alert('INCORRECT ANSWER...Please Try Again');</script>";
