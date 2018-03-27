@@ -17,22 +17,22 @@ $stmt->close();
 include("head.php")
 ?>
 <head>
-    
+  <meta http-equiv="refresh" content="60">
 </head>
 <!--Main layout-->
 <main>
-    <title>finalist</title>
+    <title>Hints</title>
     <div class="container-fluid text-center">
         <!--Card-->
         <div class="card card-cascade wider reverse my-4 pb-5">
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Hint</strong></h4>
-                
+                <h4 style="padding-top: 2%; color: #E3468C;"><strong>HINTS</strong></h4>
+                <?php echo '<p class="blue-text">Round ' . $round . '   </p>'; ?>
                 
                 <?php
                 
-                $sql = 'SELECT `Teamname`,`levels`,`date` FROM `members` WHERE levels>=6 ORDER BY `levels` DESC, `date` ASC';
+                $sql = 'SELECT `level`,`hint` FROM `hinttab` ORDER BY `level` ASC';
                 mysqli_select_db($mysqli,'secure_login');
                 $retval = mysqli_query($mysqli,$sql);
                 if(! $retval)
@@ -46,32 +46,36 @@ include("head.php")
                 }
                 </style>
                 <div style="padding-top: 2%;">
-                    <table class=" table table-striped" style="width: 50%;" border="1" align="center">
+                    <table class=" table table-striped" border="1" style="width: 50%;" align="center">
                         
-                        <tbody>
-<tr>Hint will released as the round progresses!</tr>
-                            <tr>
+                        <tr >
+                            
                             <td class="table-dark">
-                                Level
+                                LEVEL
                             </td>
                             <td class="table-dark">
-                                hint
+                                HINT
                             </td>
-                           
+                            
                         </tr>
+                        <?php $i=1;
+                        while($row =mysqli_fetch_array($retval , MYSQLI_BOTH))
+                        {
+                        ?>
                         <tr>
-                            <td>
-                             1                            </td>
-                            <td>Thoda aagese gino utna pichese
-                                                        </td>
                            
+                            <td>
+                                <?php echo "" .$row["level"]; ?>
+                            </td>
+                            <td>
+                                <?php echo "" .$row["hint"]; ?>
+                            </td>
                             
                             
                             
                         </tr>
-         
-                  
-                    </tbody></table>
+                        <?php $i++;} ?>
+                    </table>
                 </div>
                 <div class="mask waves-effect waves-light"></div>
             </a>
