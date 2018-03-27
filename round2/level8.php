@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "9" || $round != "2"  ) {
+{               if ($level != "8" || $round != "2"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -121,7 +121,7 @@ include_once 'includes/psl-config.php';
 </h3>  </p>
  
                     
-                         <form action="level9.php" method="POST">
+                         <form action="level8.php" method="POST">
                
                 
                         <div class="form-group">
