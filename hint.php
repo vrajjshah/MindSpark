@@ -61,8 +61,8 @@ include("head.php")
                         </tr>
                         <tr>
                             <td>
-                            Level 1                            </td>
-                            <td>
+                             1                            </td>
+                            <td>Thoda aagese gino utna pichese
                                                         </td>
                            
                             
