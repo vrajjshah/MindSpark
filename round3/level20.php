@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "2" || $round != "3"  ) {
+{               if ($level != "20" || $round != "3"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -79,17 +79,10 @@ else{
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE RIDDLE</h4>
-                         <p class="card-text" > <h3>In file compression (ZIP files), we generally use special type of bits to represent a character.
-Those special type of bits are formally known as PREFIX CODES.
-Here we have 5 characters in file, and their frequency are,
-Character A occurs 50 times, B occurs 5 times, C occurs 30 times, D occurs 15 times and E occurs 20 times. 
-You’re given five prefix codes, they are 0,10,111,1100,1101. You have to choose appropriate prefix code for each character.
-Your task is to find out number of bits required to store character E
-
-</h3>  </p>
+                         <p class="card-text" > <h3>24.	If [1 1] = 0, [0 2 3 5] = 2 then [4 11 17 29 ] = _____  </h3>  </p>
  
                     
-                         <form action="level2.php" method="POST">
+                         <form action="level20.php" method="POST">
                
                 
                         <div class="form-group">
@@ -113,12 +106,12 @@ Your task is to find out number of bits required to store character E
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == '60')
+        if(strtoupper($_POST['answer']) == '12')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='21', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();
