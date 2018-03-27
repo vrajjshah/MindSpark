@@ -36,15 +36,16 @@ include("head.php")
                 <h4 class="card-title"><strong>WELCOME TO MINDSPARK</strong></h4>
                 <h5 class="blue-text"><strong>Buck up and brush up your logic! 
 Because here comes the most twisted treasure hunt with questions comprehensive of spontaneity, logic and common sense. One just has to just efficiently use their cognitive ability in  order to solve the riddles no programming experience required.</strong></h5>
-                <p class="card-text">Round 1- Focuses on your Googling skills, how efficiently you search for the given riddles.
+                <p class="card-text">
 
-<!-- Round 2- Answers to the riddles shall be in the form of QR Code. Participants will be required to ascertain these answers from different places of the college.
+Round 2- Answers to the riddles shall be in the form of QR Code. Participants will be required to ascertain these answers from different places of the college.
 
 Round 3- The third and final round is also about QR Code, but this shall be spread over to the campus area and not just college. 
 
-Round 2 & 3 basically have both types of riddles. Simple one, regarding Googling skills and the one based on QR Code. -->
+Round 2 & 3 basically have both types of riddles. Simple one, regarding Googling skills and the one based on QR Code.
               <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 1 Winners</a>
                 </br>
+                <a href="instruction.php" class="btn btn-primary btn-lg waves-effect waves-light">instructions round 2</a>
                 </br>
                 <p class="card-text">Already Registered?</p>
                 <a href="login.php" class="btn btn-primary btn-lg waves-effect waves-light">Login</a>
