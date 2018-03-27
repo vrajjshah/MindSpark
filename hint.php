@@ -65,7 +65,7 @@ include("head.php")
                         <tr>
                            
                             <td>
-                                <?php echo "" .$row["level"]; ?>
+                                <?php echo "" .$row["levels"]; ?>
                             </td>
                             <td>
                                 <?php echo "" .$row["hint"]; ?>
