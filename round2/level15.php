@@ -92,7 +92,9 @@ echo '<p class="error">Error Logging In!</p>';
             </a>
         </div>
         </div>
-            <br><br><br>
+            <br>
+            <br>
+            <br>
             <form action="level15.php" method="POST">
                 
                 

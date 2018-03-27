@@ -72,7 +72,7 @@ if (isset($_GET['error'])) {
 echo '<p class="error">Error Logging In!</p>';
 }
 ?>
-<<main>
+<main>
     
     <div class="container-fluid text-center">
         <!--Card-->
@@ -89,7 +89,7 @@ echo '<p class="error">Error Logging In!</p>';
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                 <img src="9_2.jpg" class="img-fluid">
                 <div class="mask waves-effect waves-light"></div>
-            </a>
+            
         </div>
         </div>
             <br><br><br>
@@ -102,8 +102,9 @@ echo '<p class="error">Error Logging In!</p>';
                 <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
             </form>
             
-            
-            
+            </div>
+        </div>
+
         </div>
         <!--/.Card content-->
     </div>
