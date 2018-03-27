@@ -43,7 +43,7 @@ Round 2- Answers to the riddles shall be in the form of QR Code. Participants wi
 Round 3- The third and final round is also about QR Code, but this shall be spread over to the campus area and not just college. 
 
 Round 2 & 3 basically have both types of riddles. Simple one, regarding Googling skills and the one based on QR Code.
-              <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 1 Winners</a>
+              <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 2 Winners</a>
                 </br>
                 <a href="instruction.php" class="btn btn-primary btn-lg waves-effect waves-light">instructions round 2</a>
                 </br>
