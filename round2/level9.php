@@ -84,6 +84,7 @@ echo '<p class="error">Error Logging In!</p>';
         <!--Card content-->
         <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
             <!--Title-->
+            <h4 class="card-title">QR CODES ARE OVER , YOU CAN NOW CONTINUE FROM HOME</h4>
             <h4 class="card-title">SOLVE THE CLUE</h4>
             <p class="card-text"></p>
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
