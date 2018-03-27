@@ -48,7 +48,9 @@ include("head.php")
                 <div style="padding-top: 2%;">
                     <table class=" table table-striped" style="width: 50%;" border="1" align="center">
                         
-                        <tbody><tr>
+                        <tbody>
+<tr>Hint will released as the round progresses!</tr>
+                            <tr>
                             <td class="table-dark">
                                 Level
                             </td>
