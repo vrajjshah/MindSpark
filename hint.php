@@ -32,7 +32,7 @@ include("head.php")
                 
                 <?php
                 
-                $sql = 'SELECT `level`,`hint` FROM `hinttab` ORDER BY `level` ASC';
+                $sql = 'SELECT `levels`,`hint` FROM `hinttab` ORDER BY `levels` ASC';
                 mysqli_select_db($mysqli,'secure_login');
                 $retval = mysqli_query($mysqli,$sql);
                 if(! $retval)
