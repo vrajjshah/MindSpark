@@ -155,7 +155,7 @@ include_once 'includes/psl-config.php';
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
-            
+            date_default_timezone_set('Asia/Kolkata');
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='16', date=? WHERE teamname = ?" );
                $insert_stmt->bind_param('ss', $_SESSION['teamname'], $date('d-m-Y H:i') );
                 $insert_stmt->execute();
