@@ -33,10 +33,10 @@ include("head.php")
             <!--Card content-->
             <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                 <!--Title-->
-                <h4 class="card-title"><strong>Round 1 is closed.</strong></h4>
+                <h4 class="card-title"><strong>Round 2 is closed.</strong></h4>
                 <h5 class="blue-text"><strong>Please check the leaderboard</strong></h5>
-                <p class="card-text">Teams which are level 6 or up will proceed to next round on 27/3/2017.</p>
-                <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 1 Winners</a>
+                <p class="card-text">next round on 28/3/2017.</p>
+                <a href="finalist.php" class="btn btn-primary btn-lg waves-effect waves-light">Round 2 Winners</a>
                 </br>
                 </br>
                 
