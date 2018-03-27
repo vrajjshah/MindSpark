@@ -113,6 +113,9 @@ include_once 'includes/psl-config.php';
                 <p><a href="index.php">MindSpark</a></p>
             </div>
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="redirect.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Continue</span></a>
+                </li>
                <li class="nav-item">
                     <a class="nav-link waves-effect waves-light" href="../hint.php"><i class="fa fa-angle-right"></i> <span class="clearfix d-none d-sm-inline-block">Hints</span></a>
                 </li>
