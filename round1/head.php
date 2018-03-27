@@ -3,6 +3,8 @@
 include_once 'includes/db_connect.php';
 include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
+date_default_timezone_set('Asia/Kolkata');
+
 ?>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
