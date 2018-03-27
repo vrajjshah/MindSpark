@@ -156,7 +156,7 @@ include_once 'includes/psl-config.php';
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='16', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='16', date=now() WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();
