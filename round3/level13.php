@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "1" || $round != "3"  ) {
+{               if ($level != "13" || $round != "3"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -115,11 +115,11 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE QR</h4>
-                         <p class="card-text" > <h3>Bermuda triangle of ADIT.
+                         <p class="card-text" > <h3>A showcase of Languages
 </h3>  </p>
  
                     
-                         <form action="level1.php" method="POST">
+                         <form action="level13.php" method="POST">
                
                 
                         <div class="form-group">
@@ -143,12 +143,12 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == 'bfherbfyvbeyu')
+        if(strtolower($_POST['answer']) == 'nuifbvbiyvbjfvdcer')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='14', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();
