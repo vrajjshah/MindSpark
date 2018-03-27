@@ -115,7 +115,7 @@ echo '<p class="error">Error Logging In!</p>';
 <?php
 if(isset($_POST['answer']))
 {
-if(strtolower($_POST['answer']) == 'grand slams')
+if(strtolower($_POST['answer']) == 'grand slam')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
