@@ -115,9 +115,7 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3><embed src=" <?php
-  echo "file1.mp3";}
-?>" autostart="false" loop="false" />
+                         <p class="card-text" > <embed src="file1.mp3" autostart="false" loop="false" /></p>
 </h3>  </p>
  
                     
