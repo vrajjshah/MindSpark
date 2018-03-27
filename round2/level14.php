@@ -89,11 +89,9 @@ echo '<p class="error">Error Logging In!</p>';
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                 <img src="14_2.jpg" class="img-fluid">
                 <div class="mask waves-effect waves-light"></div>
-            </a>
+            
         </div>
-        </div>
-            <br><br><br>
-            <form action="level14.php" method="POST">
+         <form action="level14.php" method="POST">
                 
                 
                 <div class="form-group">
@@ -101,6 +99,8 @@ echo '<p class="error">Error Logging In!</p>';
                 </div>
                 <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
             </form>
+        </div>
+           
             
             
             

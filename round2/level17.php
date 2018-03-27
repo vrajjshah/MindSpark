@@ -91,11 +91,8 @@ echo '<p class="error">Error Logging In!</p>';
                 <br>
                 <p>No. of Disk=10</p>
                 <div class="mask waves-effect waves-light"></div>
-            </a>
-        </div>
-        </div>
-            <br><br><br>
-            <form action="level17.php" method="POST">
+                    </div>
+                    <form action="level17.php" method="POST">
                 
                 
                 <div class="form-group">
@@ -103,6 +100,9 @@ echo '<p class="error">Error Logging In!</p>';
                 </div>
                 <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
             </form>
+        </div>
+            
+            
             
             
             
