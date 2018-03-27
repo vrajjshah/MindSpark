@@ -115,8 +115,7 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE QR</h4>
-                         <p class="card-text" > <h3>"Yaadein Mithai ke Dibbe ki tarah hoti hai,
-    Ek baar khula toh sirf ek tukda nahi kha paoge..."
+                         <p class="card-text" > <h3>"Apple does it worst, Google does it better
 
 </h3>  </p>
  
