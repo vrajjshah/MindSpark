@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "2" || $round != "2"  ) {
+{               if ($level != "5" || $round != "2"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -115,14 +115,19 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3>Go to Geneva Motorshow 2018 In switzerland<br>
-    To participate in it and gain knowledge of a perticular car company<br>
-     Room and get your knowledge expanded 
-     To 201%.
-</h3>  </p>
+                         <p class="card-text" > <h3>Given two numbers m and n, Find the smallest and strictly positive number ‘A’ such that m*A is a perfect square and n*A is perfect cube.<br>
+
+Example:
+Let’s take m=2 and n=4,
+If we take A=2 then m*A=4 which is perfect square and n*A=8 which is perfect cube of some number.
+<br>
+Note that perfect square and perfect cube need not necessarily have to be of same number.
+(In this example both are of same number which is 2.)
+<br>>
+Question: Find out the value of A if values of m and n are 2 and 3 respectively.</h3>  </p>
  
                     
-                         <form action="level2.php" method="POST">
+                         <form action="level5.php" method="POST">
                
                 
                         <div class="form-group">
@@ -146,12 +151,12 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == 'jnfvuibcyubqyubrtdsnfpaoqddjpeid')
+        if(strtolower($_POST['answer']) == 'wikipedia')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='6', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();

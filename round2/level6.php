@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "2" || $round != "2"  ) {
+{               if ($level != "6" || $round != "2"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -115,14 +115,13 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                         <p class="card-text" > <h3>Go to Geneva Motorshow 2018 In switzerland<br>
-    To participate in it and gain knowledge of a perticular car company<br>
-     Room and get your knowledge expanded 
-     To 201%.
+                         <p class="card-text" > <h3><embed src=" <?php
+  echo "file1.mp3";}
+?>" autostart="false" loop="false" />
 </h3>  </p>
  
                     
-                         <form action="level2.php" method="POST">
+                         <form action="level6.php" method="POST">
                
                 
                         <div class="form-group">
@@ -146,12 +145,12 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == 'jnfvuibcyubqyubrtdsnfpaoqddjpeid')
+        if(strtolower($_POST['answer']) == 'efbyhwiidbcdwasbbbbbbbuewf')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='3', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='7', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();

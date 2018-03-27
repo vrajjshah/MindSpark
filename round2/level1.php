@@ -17,7 +17,7 @@ $stmt = $mysqli->prepare("SELECT levels,hint,hintvalue FROM members WHERE teamna
                 
 
                 $stmt->close(); 
-                 $stmt = $mysqli->prepare("SELECT round FROM round WHERE id = '0'");
+               $stmt = $mysqli->prepare("SELECT round FROM round WHERE id = '0'");
              $stmt->execute();
                 $stmt->bind_result($round);
                 $stmt->fetch();
@@ -35,7 +35,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "1" || $round !="2"  ) {
+{               if ($level != "1" || $round != "2"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -52,7 +52,7 @@ else{
     {   
          if ($hintvalue=="1") {
 
-            echo "<script>alert('Hint here');</script>";
+            echo "<script>alert('Where do you check your internet connection, generally (Just an Indian thing)?');</script>";
             # code...
         }
         else if ($hint=="0") {
@@ -70,12 +70,13 @@ else{
     {   include 'includes/db_connect.php';
         include_once 'includes/functions.php';
 include_once 'includes/psl-config.php';
-        $hint=$hint-1;
+         $hint=$hint-1;
         $stmt = $mysqli->prepare("UPDATE members set hint='$hint',hintvalue='1' WHERE teamname = ?");
                $stmt->bind_param('s', $_SESSION['teamname'] );
                $stmt->execute();
                 $stmt->close(); 
-       echo "<script>alert('Hint here');</script>";
+      echo "<script>alert('Where do you check your internet connection, generally (Just an Indian thing)?');</script>";
+      header("Refresh:0");
     }
 ?>
 <?php 
@@ -114,8 +115,9 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE CLUE</h4>
-                        <p class="card-text">Riddle</p>
-
+                         <p class="card-text" > <h3>R * T J L 2 $ D = M # 8 C % B < K 1 ^ A W ? P E + Q @ 7 F 6 <br> Based on the positions in the above arrangement,<br>
+    If TRJ : 76@, then $2=  : ____ </h3>  </p>
+ 
                     
                          <form action="level1.php" method="POST">
                
@@ -125,12 +127,9 @@ include_once 'includes/psl-config.php';
                          </div>
                          <button class="btn btn-primary btn-lg waves-effect waves-light">SUBMIT</button>
                          </form>
-                         <?php echo '<p class="blue-text">No. of Hints left : ' . $hint . ' </p>';
- 				       ?>
-                         <form action="level1.php" method="post">
-   	   				     <button name="hint" class="btn btn-default btn-lg waves-effect waves-light" value="GO"> Show Hint</button>
-				        </form>
-				
+                         
+                        
+                
                 </div>
                 <!--/.Card content-->
 
@@ -144,15 +143,18 @@ include_once 'includes/psl-config.php';
     
     if(isset($_POST['answer']))
     {
-        if($_POST['answer'] == 'SAMSUNG')
+        if(strtolower($_POST['answer']) == 'e+?')
         {
                
-               
-              
+                // echo "<script>alert('Correct Answer');</script>";
+            
                $insert_stmt = $mysqli->prepare("UPDATE members SET levels='2', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
-                header("Location:redirect.php");
+                $insert_stmt->close();
+                echo " <script>window.location.replace('redirect.php');</script>";
+                
+                
           
            
         }
