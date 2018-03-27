@@ -119,7 +119,7 @@ if(strtolower($_POST['answer']) == 'tim cook')
                
                 // echo "<script>alert('Correct Answer');</script>";
             
-               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='10', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
+               $insert_stmt = $mysqli->prepare("UPDATE members SET levels='11', date=CURRENT_TIMESTAMP WHERE teamname = ?" );
                $insert_stmt->bind_param('s', $_SESSION['teamname'] );
                 $insert_stmt->execute();
                 $insert_stmt->close();
