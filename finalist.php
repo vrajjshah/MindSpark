@@ -28,8 +28,8 @@ include("head.php")
         <div class="card card-cascade wider reverse my-4 pb-5">
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Round 3 winners</strong></h4>
-                <h3 style="padding-top: 2%; color: #E3468C;"><strong>Round 4 winners will be declared at 2:30 PM</strong></h3>
+                <h4 style="padding-top: 2%; color: #E3468C;"><strong>Round 4 winners</strong></h4>
+                
                 
                 
                 <?php
@@ -60,7 +60,7 @@ include("head.php")
                            
                         </tr>
                        
-                                               <!--  <tr>
+                                                <tr>
                             <td>
                                 1                            </td>
                             <td>
@@ -76,7 +76,7 @@ include("head.php")
                                 RahulandMahek                         </td>
                             
                             
-                        </tr> -->
+                        </tr>
                                                 
                                             </tbody></table>
                 </div>
