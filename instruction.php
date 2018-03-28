@@ -26,6 +26,8 @@ include("head.php")
                 <p class="card-title blue-text" ><strong> <ul class="purple-text" style="text-align: left;">
                     <li>Use Names as per wikipedia</li>
                     <li>use date as dd/mm/yyyy</li>
+                    <li>We will be observing your activities, A team working with other team will be scrutinized.</li>
+                    <li>Final Result will be decided by the Event coordinator and team.</li>
                    </strong></p>
                 
                 <a href="login.php" class="btn btn-primary btn-lg waves-effect waves-light">Continue to Login</a>
