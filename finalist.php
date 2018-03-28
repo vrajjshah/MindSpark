@@ -57,12 +57,7 @@ include("head.php")
                             <td class="table-dark">
                                 Teamname
                             </td>
-                            <td class="table-dark">
-                                Level
-                            </td>
-                            <td class="table-dark">
-                                Timestamp
-                            </td>
+                           
                         </tr>
                        
                                                <!--  <tr>
