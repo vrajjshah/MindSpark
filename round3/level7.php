@@ -115,7 +115,7 @@ include_once 'includes/psl-config.php';
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE QR</h4>
-                         <p class="card-text" > <h3>Ask ME about my TOOLBOX.
+                         <p class="card-text" > <h3>Twin brothers where childhood and adolescence meet.
 </h3>  </p>
  
                     

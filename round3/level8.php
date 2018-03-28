@@ -78,8 +78,8 @@ else{
                 <!--Card content-->
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
-                         <h4 class="card-title">SOLVE THE RIDDLE</h4>
-                         <p class="card-text" > <h3>Find the smallest possible number A such that,P3+Q3=X3+Y3 = A
+                         <h4 class="card-title">SOLVE THE QR</h4>
+                         <p class="card-text" > <h3>Tl+Ca+Fm
 
 
 </h3>  </p>
@@ -109,7 +109,7 @@ else{
     
     if(isset($_POST['answer']))
     {
-        if(strtolower($_POST['answer']) == '1729')
+        if(strtolower($_POST['answer']) == 'jnfvuibcyubqyubrtdsnfpaoqddjpeid')
         {
                
                 // echo "<script>alert('Correct Answer');</script>";
