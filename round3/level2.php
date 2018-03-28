@@ -79,12 +79,13 @@ else{
                 <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                     <!--Title-->
                          <h4 class="card-title">SOLVE THE RIDDLE</h4>
-                         <p class="card-text" > <h3>In file compression (ZIP files), we generally use special type of bits to represent a character.
-Those special type of bits are formally known as PREFIX CODES.
-Here we have 5 characters in file, and their frequency are,
-Character A occurs 50 times, B occurs 5 times, C occurs 30 times, D occurs 15 times and E occurs 20 times. 
-You’re given five prefix codes, they are 0,10,111,1100,1101. You have to choose appropriate prefix code for each character.
-Your task is to find out number of bits required to store character E
+                         <p class="card-text" > <h3>In file compression (ZIP files), we generally use special type of bits to represent a character.<br>
+Those special type of bits are formally known as PREFIX CODES.<br>
+Here we have 5 characters in file, and their frequency are,<br>
+Character A occurs 50 times, B occurs 5 times, C occurs 30 times, D occurs 15 times and E occurs 20 times. <br>
+You’re given five prefix codes, they are 0,10,111,1100,1101. You have to choose appropriate prefix code for each character.<br>
+Your task is to find out number of bits required to store character E. 
+<br>
 
 </h3>  </p>
  
