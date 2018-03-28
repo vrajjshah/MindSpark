@@ -34,7 +34,7 @@ else{
  
                 
  function onload($level,$round)
-{               if ($level != "19" || $round != "2"  ) {
+{               if ($level != "20" || $round != "3"  ) {
                     
                   header("Location:redirect.php");
               }
@@ -90,7 +90,7 @@ include("head.php")
         <div class="card card-cascade wider reverse my-4 pb-5">
             <!--Card image-->
             <div class="view overlay rgba-white-slight wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-                <img src="1.jpg" class="img-fluid">
+                <img src="11.jpg" class="img-fluid">
                 <a href="#!">
                     <div class="mask waves-effect waves-light"></div>
                 </a>
@@ -100,7 +100,7 @@ include("head.php")
             <!--Card content-->
             <div class="card-body text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;">
                 <!--Title-->
-                <h4 class="card-title"><strong>Round-2 Completed</strong></h4>
+                <h4 class="card-title"><strong>Round-3 Completed</strong></h4>
                 <h5 class="blue-text"><strong>Please check the leaderboard for your ranking</strong></h5>
                 
                 <a href="../leaderboard.php" class="btn btn-primary btn-lg waves-effect waves-light">leaderboard</a>
